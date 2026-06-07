@@ -23,8 +23,8 @@ DEFAULT_MODEL = "Qwen3.6 27B" #the model tag from your llama.cpp or vllm host
 SYSTEM_DESCRIPTION = "Ryzen 3 3600X, 64GB ddr4"
 SYSTEM_DESCRIPTION_GPU = "2 x RTX 2080 Ti with NVLINK, Power limit 146W/card (upgraded 22GB vram each)"
 INFERENCE_ENGINE = "vllm"  # vllm, sglang, llama.cpp .... whatever you are using
-DEFAULT_CONCURRENCY_LEVELS = [1,2,4,8] # For llama.cpp the default goes only to 4... so you might want to remove the 8 in the list
-SAMPLES_PER_CONCURRENCY = 2        # <-- samples = concurrency * this value
+DEFAULT_CONCURRENCY_LEVELS = [1,2,4]
+SAMPLES_PER_CONCURRENCY = 1        # <-- samples = concurrency * this value
 DEFAULT_DATASET_CACHE_DIR = "./dataset_cache"
 DEFAULT_HF_TOKEN = None
 
