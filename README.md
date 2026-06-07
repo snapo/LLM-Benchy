@@ -19,6 +19,9 @@ Two deployment modes are supported:
 The design prioritizes reproducibility, ease of integration into CI/CD pipelines, and cross‑engine compatibility (vLLM, SGLang, llama.cpp, etc.).
 
 
+The html file can simply be put onto your desktop and you can run it.
+The python file requires you to pip install requests, datasets and openai packages
+
 ## WebUI
 <img width="1043" height="1153" alt="image" src="https://github.com/user-attachments/assets/6ff6c4a7-167d-4e54-91a2-f273633b35e4" />
 
