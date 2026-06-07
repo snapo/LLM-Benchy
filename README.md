@@ -1,16 +1,31 @@
-# LLM-Benchy
-A simpliefied benchmark that works for all LLM endpoints... or should
+# LLM-Benchy: A Unified Benchmarking Framework for LLM Endpoints
 
-Like in the 3d Printing world a unified benchmark is very important....
+To address the lack of standardized performance evaluation across large language model (LLM) serving infrastructures—analogous to the role of benchmark artifacts in additive manufacturing—we present **LLM-Benchy**, a lightweight benchmarking utility designed for universal compatibility with any OpenAI-compatible endpoint.
 
-This is why i created this with the help of the Speed Bench dataset from Nvidia.
+The tool leverages the **Speed Bench dataset** (provided by NVIDIA) to conduct category‑wise throughput and latency measurements. Key metrics include:
 
-It lets you see token speed for every different category, it lets you see prompt processing, it can do concurrency... and a little more.
-per default it saves a benchmark-results.txt where you see all your information (without the api key of course)
+- **Token generation speed** (tokens per second) disaggregated by task category (e.g., reasoning, summarization, multilingual, coding).
+- **Prompt processing throughput** (prompt tokens per second).
+- **Concurrent request handling** across user‑defined concurrency levels.
+- **Per‑category and aggregate latency** (time to first token, end‑to‑end latency).
+
+Results are automatically persisted to `benchmark-results.txt` with sensitive information (e.g., API keys) redacted.
+
+Two deployment modes are supported:
+
+1. **Standalone Python script** – direct execution with no additional dependencies beyond the standard `requests` library.
+2. **Single‑file HTML dashboard** – interactive browser‑based frontend that requires the LLM server to enable **CORS** (`Access-Control-Allow-Origin` headers) to bypass cross‑origin restrictions.
+
+The design prioritizes reproducibility, ease of integration into CI/CD pipelines, and cross‑engine compatibility (vLLM, SGLang, llama.cpp, etc.).
+
+
+## WebUI
+<img width="1043" height="1153" alt="image" src="https://github.com/user-attachments/assets/6ff6c4a7-167d-4e54-91a2-f273633b35e4" />
 
 
 
-## Sample output result benchmark-results.txt
+
+## Sample output result benchmark-results.txt (either created by the python script OR after the benchmark is done in the WebUI you can click the copy button to get the data into your clipboard to post it on reddit/github or whereever you wanna see your benchmark scores
 
 ```
 Benchmark run at 2026-06-07 04:20:29
