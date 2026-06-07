@@ -7,7 +7,7 @@ The tool leverages the **Speed Bench dataset** (provided by NVIDIA) to conduct c
 - **Token generation speed** (tokens per second) disaggregated by task category (e.g., reasoning, summarization, multilingual, coding).
 - **Prompt processing throughput** (prompt tokens per second).
 - **Concurrent request handling** across user‑defined concurrency levels.
-- **Per‑category and aggregate latency** (time to first token, end‑to‑end latency).
+- **Per‑category and aggregate latency** (time to first token, end‑to‑end latency , this tests specifically MTP next token prediction).
 
 Results are automatically persisted to `benchmark-results.txt` with sensitive information (e.g., API keys) redacted.
 
